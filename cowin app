@@ -38,7 +38,7 @@ for k in range(len(pincodes)):
         print(response.json()["centers"][i-1]["sessions"][j-1]["vaccine"])
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
-        s.login("m.vchandrahas@gmail.com", "Password")
+        s.login("thallam.sai@btech.christuniversity.in", "92653048")
         str1=response.json()["centers"][i-1]["name"]
         str2=response.json()["centers"][i-1]["sessions"][j-1]["available_capacity"]
         message= (message+ "\n" +	"Center name : " + str1 + "\n"+"Available :" + str(str2) + "\n")
@@ -48,4 +48,3 @@ if (c==1):
   s.sendmail("thallam.sai@btech.christuniversity.in", "m.vchandrahas@gmail.com", message)
   #print('Email sent to '+ToEmail+' From '+FromEmail)
   s.quit()
-  
