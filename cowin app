@@ -18,11 +18,11 @@ pincodes=['530016']
 
 FromEmail="thallam.sai@btech.christuniversity.in"    # From Email ID inside double quote
 FromEmailPass="password"         # From Email ID password inside double quote
-ToEmail="m.vchandrahas@gmail.com"  # To Email ID inside double quote
+ToEmail="thallamsaivilohit@gmail.com"  # To Email ID inside double quote
 
 
 message = """From:thallam.sai@btech.christuniversity.in 
-To: m.vchandrahas@gmail.com
+To: thallamsaivilohit@gmail.com
 Subject: Vaccine Available
 """
 c=0
@@ -38,13 +38,13 @@ for k in range(len(pincodes)):
         print(response.json()["centers"][i-1]["sessions"][j-1]["vaccine"])
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
-        s.login("thallam.sai@btech.christuniversity.in", "92653048")
+        s.login("thallam.sai@btech.christuniversity.in", "password")
         str1=response.json()["centers"][i-1]["name"]
         str2=response.json()["centers"][i-1]["sessions"][j-1]["available_capacity"]
         message= (message+ "\n" +	"Center name : " + str1 + "\n"+"Available :" + str(str2) + "\n")
         c=1
 
 if (c==1):
-  s.sendmail("thallam.sai@btech.christuniversity.in", "m.vchandrahas@gmail.com", message)
+  s.sendmail("thallam.sai@btech.christuniversity.in", "thallamsaivilohit@gmail.com", message)
   #print('Email sent to '+ToEmail+' From '+FromEmail)
   s.quit()
