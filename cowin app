@@ -17,7 +17,7 @@ vacc="COVISHIELD"
 pincodes=['530016']
 
 FromEmail="thallam.sai@btech.christuniversity.in"    # From Email ID inside double quote
-FromEmailPass="92653048"         # From Email ID password inside double quote
+FromEmailPass="password"         # From Email ID password inside double quote
 ToEmail="m.vchandrahas@gmail.com"  # To Email ID inside double quote
 
 
